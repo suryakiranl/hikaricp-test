@@ -34,7 +34,7 @@ public class ConnectionPool {
 
 	private ConnectionPool() {
 		ds = new HikariDataSource();
-		ds.setMaximumPoolSize(100);
+		ds.setMaximumPoolSize(1000);
 		ds.setDataSourceClassName("org.postgresql.ds.PGPoolingDataSource");
 		ds.addDataSourceProperty("serverName", "localhost");
 		ds.addDataSourceProperty("databaseName", "ssn_db");
